@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 8%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+}
+
+ul#Nav {
+    margin: 0;
+    float: left;
+    padding-left: 8vmin;
+    list-style-type: none;
+    display: block;
+    position: relative;
+    bottom: 10px;
+}
+
+li {
+    float: left;
+    
+}
+
+a:hover:not(.active):not(.Content a){
+    background-color: darkgrey;
+    color: #fff
+}
+a.active{
+    text-decoration: none;
+    display: block;
+    padding: 1em 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+a.Blogs {
+    text-decoration: none;
+    display: block;
+    padding: 1em 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+img {
+    width: 8em;
+    padding-left: 1em;
+    float: left;
+    margin-top: -25px;
+    text-align: left;
+}
+
+.hero {
+    width: auto ;
+    height: 100vh;
+    background-image:linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.Content {
+    text-align: center;
+    
+}
+
+.Content h1 {
+    font-size: 6vmax ;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    
+}
+.Content a {
+    text-decoration: none;
+    font-size: 1vmax;
+    display: inline-block;
+    padding: 10px 50px;
+    color: #fff;
+    border: 1px solid#fff;
+    border-radius: 50px;
+}
+
+.my{
+    margin: 40px 0px;
+}
+
