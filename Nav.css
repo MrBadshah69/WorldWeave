@@ -1,34 +1,32 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 nav {
-    overflow: hidden;
-    display:flex;
+    /* overflow: hidden; */
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 8%;
-    top: 0;
-    left: 0;
+    top: 15px;
+    left: 15vw;
     position: absolute;
-
 }
 
 ul#Nav {
-    margin: 0;
-    float: left;
-    padding-left: 8vmin;
+    /* margin: 0; */
+    /* float: left; */
+    
     list-style-type: none;
+    /* position: fixed; */
     display: block;
-    position: relative;
-    bottom: 10px;
 }
 
 li {
     float: left;
+    margin-left: 50px;
     
 }
 
@@ -43,6 +41,7 @@ a.active{
     text-transform: uppercase;
     font-weight: bold;
     color: rgb(255, 255, 255);
+    
 }
 a.Blogs {
     text-decoration: none;
@@ -53,12 +52,11 @@ a.Blogs {
     color: rgb(255, 255, 255);
 }
 
-img {
-    width: 8em;
-    padding-left: 1em;
-    float: left;
-    margin-top: -25px;
-    text-align: left;
+.Logo {
+    width: 100px;
+    position: fixed;
+    left: 30px;
+    top: 0px;
 }
 
 .hero {
@@ -95,7 +93,7 @@ img {
 }
 
 .Content {
-    text-align: center;
+    text-align: center
     
 }
 
@@ -116,7 +114,75 @@ img {
     border-radius: 50px;
 }
 
-.my{
-    margin: 40px 0px;
+.hamburger{
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+    float: right;
+    position: relative;
+    right: -300px;
+   bottom: 40vmax
+}
+.hamburger:hover{
+    background-color: #fff;
 }
 
+.hamburger div{
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: black;
+    position: relative;
+    top: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    header{
+        width: 90%;
+        padding: 0 20px;
+    }
+    nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 288px;
+        height: 100vh;
+        background-color: #ccc;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba( 0, 0, 0, 0.05);
+        display: block;
+        padding: 0;
+    }
+    #nav_check:checked ~ nav{
+        left: 0;
+    }
+        nav .Logo{
+            display: block;
+            height: 150px;
+            width: 150px;
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+        a.active{
+            background-color:slategray;
+        }
+        nav ul li a{
+            margin-bottom: 5px;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+
+        nav ul{
+            display: block;
+            padding: 0 0px;
+            margin-top: 200px;
+        }
+        .hamburger{
+            display: block; 
+        }
+}
